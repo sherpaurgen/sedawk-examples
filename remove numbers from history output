@@ -1,20 +1,16 @@
  history | awk '{ $1=$1; print $0; }' | sed 's/^[0-9]\+//g;s/^ *//'
+ history | sed 's/^ *[0-9][0-9]* *//'
  
- AWK
-
  
-
-will print all but very first column:
-
+ AWK 
  
+1)will print all but very first column:
 
 awk '{$1=""; print $0}' somefile
 
  
 
-will print all but two first columns:
-
- 
+2)will print all but two first columns:
 
 awk '{$1=$2=""; print $0}' somefile
 
@@ -28,16 +24,12 @@ history | awk '{$1=$1;print}' | cut -d' ' -f1-4     # cut -f1-4 will print from 
 
 SED editor sed
 
- 
-
 cat test | sed 's#first#second#Ig'     ## use `I` for case insensitive
 
  
 
 Remove multiple spaces
-
-= = = = = = =
-
+= = = = = = = = = = = =
 root@vm2:~# cat hello 
 
 #ab 12
@@ -51,10 +43,6 @@ cd      99
     test
 
       #tellso
-
- 
-
- 
 
 root@vm2:~# cat hello  | sed 's/^\s\+//g'
 
