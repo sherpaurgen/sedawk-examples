@@ -1,7 +1,7 @@
-# sedawk-examples
+    # sedawk-examples
 sed awk practical examples
 
-#remove leading tabs and spaces
+    #remove leading tabs and spaces
 vi attendence
 2015-11-08 10:07 16:32pm
 2015-11-09 09:45:30
@@ -19,4 +19,7 @@ spaces in side
 tabs outsid
 tabssd d sf
 spacedsf dsfdsf
+
+    Remove multiple tab and spaces 
+    cat lists | sed 's/[[:space:]]\+//g'
 
