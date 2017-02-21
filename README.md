@@ -26,3 +26,15 @@ spacedsf dsfdsf
     Remove multiple tab and spaces 
     cat lists | sed 's/[[:space:]]\+//g'
 
+    cat example.awk
+    BEGIN {
+	RS="\n\n";
+	FS="\n";
+
+    }
+    {
+	print $1,$2,$3,$4;
+    }
+    
+    awk -f example.awk  filename1
+
